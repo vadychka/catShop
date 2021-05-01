@@ -1,0 +1,250 @@
+@import "zeroIndex.scss";
+
+html {
+   scroll-behavior: smooth;
+}
+body {
+   position: relative;
+}
+
+.wrapper {
+   max-width: 1200px;
+   width: 90%;
+   font-size: 20px;
+}
+
+.header {
+   padding: 40px 0px 66px;
+   position: relative;
+   background-image: url(https://kalychka.github.io/AlefDev-demo/assets/images/header_bg.png);
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: white;
+
+   &:before {
+      background-color: rgba(31, 32, 33, 0.79);
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      width: 100%;
+      height: 100%;
+   }
+   &__title {
+      position: relative;
+      z-index: 2;
+      margin-top: 50px;
+      font-size: 23px;
+   }
+   &__content {
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 0fr 3fr 1fr;
+      position: relative;
+   }
+   &__menu {
+      display: flex;
+      color: white;
+      align-items: center;
+   }
+   & a {
+      color: white;
+      margin-right: 80px;
+   }
+   & a:hover {
+      color: #6ebbd3;
+      border-bottom: 1px solid #6ebbd3;
+      transition: 1s;
+   }
+   &__logo {
+      position: relative;
+      width: 78px;
+      height: 50px;
+   }
+   &__contacts {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+.main {
+   &__catalog {
+      display: grid;
+      font-size: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 21px;
+      row-gap: 27px;
+      padding-top: 38px;
+      padding-bottom: 68px;
+   }
+   &__container {
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 0 0 15px 15px;
+      background-color: #f3f3f3;
+      flex-direction: column;
+      position: relative;
+   }
+   &__info_cat {
+      display: flex;
+      margin: 1em 0;
+      border-left: 5px solid #6ebbd3;
+      padding: 0.1em;
+      font-size: 18px;
+   }
+   &__btn--sell {
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 22px;
+      background-color: black;
+      padding: 1em;
+      border-radius: 0 0 15px 15px;
+      transition: 1s;
+      display: block;
+   }
+   &__btn--bye {
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 22px;
+      background-color: #6ebbd3;
+      padding: 1em;
+      border-radius: 0 0 15px 15px;
+      transition: 1s;
+      display: block;
+   }
+   &__btn--bye:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+   }
+   &__btn--sell:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+   }
+   &__img {
+      transition: 1s;
+      display: block;
+   }
+   &__img:hover {
+      transform: scale(1.1);
+   }
+   &__discount {
+      position: absolute;
+      left: 3%;
+      top: 3%;
+      font-size: 18px;
+      background-color: #e62d2d;
+      padding: 0.2em;
+      color: white;
+      border-radius: 10px;
+   }
+   &__btn--like {
+      background: url(https://kalychka.github.io/AlefDev-demo/assets/images/like.png) no-repeat;
+      position: absolute;
+      right: 3%;
+      top: 3%;
+      width: 50px;
+      height: 50px;
+   }
+   &__sort {
+      display: flex;
+      width: 30%;
+      margin: 0;
+      padding: 1em;
+   }
+   &__add {
+      padding: 1em;
+      border: 1px solid black;
+      border-radius: 15px;
+      width: 25%;
+      text-align: center;
+   }
+   &__add:hover {
+      cursor: pointer;
+      background-color: #6ebbd3;
+      transition: 1s;
+      border: 1px solid #6ebbd3;
+   }
+}
+
+.footer {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   margin-top: 83px;
+   background-color: #1f2021;
+   padding: 83px 80px 92px;
+   color: #fff;
+
+   h2 {
+      font-size: 33px;
+      font-weight: 700;
+      line-height: 58px;
+      margin-top: 0;
+      margin-bottom: 26px;
+   }
+   p {
+      font-size: 20px;
+      line-height: 25px;
+   }
+   &__form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   &__field {
+      width: 300px;
+      height: 65px;
+      background: #fff;
+      border-radius: 10px;
+      padding-left: 33px;
+      margin-right: 16px;
+   }
+   &__button {
+      width: 250px;
+      height: 60px;
+      background: #6ebbd3;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 700;
+      transition: 1s;
+   }
+   &__button:hover {
+      cursor: pointer;
+      transform: scale(1.1, 1.1);
+   }
+   &__subscribe {
+      margin-top: 24px;
+   }
+}
+
+.rotate--logo {
+   position: absolute;
+   left: 15px;
+   transform: rotate(180deg);
+}
+
+.scroll {
+   a {
+      width: 59px;
+      height: 59px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      cursor: pointer;
+      transition: 5s;
+      transform: translateY(-50%);
+   }
+}
+
+.like__showMassage {
+   padding: 0.4em;
+   background-color: #6ebbd3;
+   position: fixed;
+   right: 20px;
+   top: 20px;
+   color: white;
+   border-radius: 10px;
+   z-index: 99;
+}

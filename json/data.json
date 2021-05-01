@@ -1,0 +1,342 @@
+[
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": true,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "6000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "5 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat2.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "3 мес",
+      "sell": true,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat3.png",
+      "price": "5000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "6 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat2.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "3000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": true,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "3 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat3.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat2.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": true,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "3000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat2.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat3.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": true,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "2000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": true,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": true,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat2.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 0
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 40
+   },
+   {
+      "name": "Кот полосатый",
+      "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
+      "price": "4000 руб",
+      "color": "Коричневый окрас",
+      "paws": 4,
+      "age": "4 мес",
+      "sell": false,
+      "discount": 40
+   }
+]

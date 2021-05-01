@@ -1,0 +1,391 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  font-size: 20px;
+}
+
+.header {
+  padding: 40px 0px 66px;
+  position: relative;
+  background-image: url(https://kalychka.github.io/AlefDev-demo/assets/images/header_bg.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.header:before {
+  background-color: rgba(31, 32, 33, 0.79);
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header__title {
+  position: relative;
+  z-index: 2;
+  margin-top: 50px;
+  font-size: 23px;
+}
+
+.header__content {
+  z-index: 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0fr 3fr 1fr;
+      grid-template-columns: 0fr 3fr 1fr;
+  position: relative;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header a {
+  color: white;
+  margin-right: 80px;
+}
+
+.header a:hover {
+  color: #6ebbd3;
+  border-bottom: 1px solid #6ebbd3;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header__logo {
+  position: relative;
+  width: 78px;
+  height: 50px;
+}
+
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__catalog {
+  display: -ms-grid;
+  display: grid;
+  font-size: 22px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 21px;
+          column-gap: 21px;
+  row-gap: 27px;
+  padding-top: 38px;
+  padding-bottom: 68px;
+}
+
+.main__container {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 0 0 15px 15px;
+  background-color: #f3f3f3;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.main__info_cat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em 0;
+  border-left: 5px solid #6ebbd3;
+  padding: 0.1em;
+  font-size: 18px;
+}
+
+.main__btn--sell {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  background-color: black;
+  padding: 1em;
+  border-radius: 0 0 15px 15px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: block;
+}
+
+.main__btn--bye {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  background-color: #6ebbd3;
+  padding: 1em;
+  border-radius: 0 0 15px 15px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: block;
+}
+
+.main__btn--bye:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main__btn--sell:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main__img {
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: block;
+}
+
+.main__img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main__discount {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  font-size: 18px;
+  background-color: #e62d2d;
+  padding: 0.2em;
+  color: white;
+  border-radius: 10px;
+}
+
+.main__btn--like {
+  background: url(https://kalychka.github.io/AlefDev-demo/assets/images/like.png) no-repeat;
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  width: 50px;
+  height: 50px;
+}
+
+.main__sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  margin: 0;
+  padding: 1em;
+}
+
+.main__add {
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 25%;
+  text-align: center;
+}
+
+.main__add:hover {
+  cursor: pointer;
+  background-color: #6ebbd3;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border: 1px solid #6ebbd3;
+}
+
+.footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  margin-top: 83px;
+  background-color: #1f2021;
+  padding: 83px 80px 92px;
+  color: #fff;
+}
+
+.footer h2 {
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 58px;
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+.footer p {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.footer__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__field {
+  width: 300px;
+  height: 65px;
+  background: #fff;
+  border-radius: 10px;
+  padding-left: 33px;
+  margin-right: 16px;
+}
+
+.footer__button {
+  width: 250px;
+  height: 60px;
+  background: #6ebbd3;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.footer__button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.footer__subscribe {
+  margin-top: 24px;
+}
+
+.rotate--logo {
+  position: absolute;
+  left: 15px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.scroll a {
+  width: 59px;
+  height: 59px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  -webkit-transition: 5s;
+  transition: 5s;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.like__showMassage {
+  padding: 0.4em;
+  background-color: #6ebbd3;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  color: white;
+  border-radius: 10px;
+  z-index: 99;
+}
