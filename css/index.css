@@ -175,6 +175,8 @@ body {
   row-gap: 27px;
   padding-top: 38px;
   padding-bottom: 68px;
+  -ms-grid-columns: (minmax(366px, 3fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(366px, 3fr));
 }
 
 .main__container {
@@ -189,7 +191,7 @@ body {
   position: relative;
 }
 
-.main__info_cat {
+.main__info-cat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,7 +201,7 @@ body {
   font-size: 18px;
 }
 
-.main__btn--sell {
+.main__btn-sell {
   width: 100%;
   text-align: center;
   color: white;
@@ -212,7 +214,7 @@ body {
   display: block;
 }
 
-.main__btn--bye {
+.main__btn-buy {
   width: 100%;
   text-align: center;
   color: white;
@@ -225,13 +227,13 @@ body {
   display: block;
 }
 
-.main__btn--bye:hover {
+.main__btn-buy:hover {
   cursor: pointer;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.main__btn--sell:hover {
+.main__btn-sell:hover {
   cursor: pointer;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -259,7 +261,7 @@ body {
   border-radius: 10px;
 }
 
-.main__btn--like {
+.main__btn-like {
   background: url(https://kalychka.github.io/AlefDev-demo/assets/images/like.png) no-repeat;
   position: absolute;
   right: 3%;
@@ -274,7 +276,7 @@ body {
   display: flex;
   width: 30%;
   margin: 0;
-  padding: 1em;
+  padding-top: 1em;
 }
 
 .main__add {
@@ -287,10 +289,40 @@ body {
 
 .main__add:hover {
   cursor: pointer;
+  color: white;
   background-color: #6ebbd3;
   -webkit-transition: 1s;
   transition: 1s;
   border: 1px solid #6ebbd3;
+}
+
+.main__item-color {
+  width: 40%;
+}
+
+.main__message-end-list {
+  padding: 0.4em;
+  background-color: #6ebbd3;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  color: red;
+  border-radius: 10px;
+  z-index: 99;
+}
+
+.main__price:hover {
+  color: #6ebbd3;
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: default;
+}
+
+.main__age:hover {
+  color: #6ebbd3;
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: default;
 }
 
 .footer {
@@ -379,7 +411,7 @@ body {
           transform: translateY(-50%);
 }
 
-.like__showMassage {
+.like__show-message {
   padding: 0.4em;
   background-color: #6ebbd3;
   position: fixed;
@@ -388,4 +420,30 @@ body {
   color: white;
   border-radius: 10px;
   z-index: 99;
+}
+
+.like__close-message {
+  -webkit-transition: 1s;
+  transition: 1s;
+  top: -100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .footer__field {
+    margin-bottom: 1em;
+    width: 250px;
+  }
 }

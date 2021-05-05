@@ -205,7 +205,7 @@
       "price": "4000 руб",
       "color": "Коричневый окрас",
       "paws": 4,
-      "age": "4 мес",
+      "age": "2 мес",
       "sell": false,
       "discount": 40
    },
@@ -305,7 +305,7 @@
       "price": "4000 руб",
       "color": "Коричневый окрас",
       "paws": 4,
-      "age": "4 мес",
+      "age": "5 мес",
       "sell": false,
       "discount": 0
    },
@@ -333,7 +333,7 @@
       "name": "Кот полосатый",
       "img": "https://kalychka.github.io/AlefDev-demo/assets/images/cats/cat4.png",
       "price": "4000 руб",
-      "color": "Коричневый окрас",
+      "color": "Коричневый окрасqqqqq",
       "paws": 4,
       "age": "4 мес",
       "sell": false,

@@ -1,32 +1,16 @@
 const mainCatalog = document.querySelector('.main__catalog');
 const mainBtnAdd = document.querySelector('.main__add')
 const sortByPrice = document.querySelector('.main__price')
+const sortByAge = document.querySelector('.main__age')
+const checkboxPrice = document.querySelector('#checkbox_price')
+const iconForPrice = document.querySelector('.main__price-icon')
+const iconForAge = document.querySelector('.main__age-icon')
 
-let paginNum = 3
-let count = 0
+let MAX_LOAD_COUNT = 3;
+let PRODUCTS_PER_CLICK = 3;
 
-mainBtnAdd.addEventListener('click', () => {
-   paginNum += 3
-   cats()
-   console.log(paginNum)
-})
-
-async function cats() {
-   let getDataFromServer = await fetch('../json/data.json');
-   let getDataFromJson = await getDataFromServer.json()
-   return getDataFromJson
-}
-cats().then((arr) => {
-
-
-   arr.map(el => {
-      if (count == paginNum) {
-         console.log(count)
-         return true
-      }
-      count += 1
-
-
+let pushData = (arr) => {
+   arr.slice(0, MAX_LOAD_COUNT).map(el => {
       const massageLikeBtn = document.querySelector('main')
       const mainContainer = document.createElement('div')
       const mainImg = document.createElement('img')
@@ -36,6 +20,9 @@ cats().then((arr) => {
       const price = document.createElement('b')
       const btnSell = document.createElement('div')
       const discount = document.createElement('div')
+      const likeBtn = document.createElement('div')
+      const catAge = document.createElement('div')
+      const catPaws = document.createElement('div')
 
       mainCatalog.append(mainContainer)
       mainContainer.classList.add('main__container')
@@ -50,31 +37,28 @@ cats().then((arr) => {
       blockForInform.innerHTML = '<b>' + el.name + '</b>'
 
       blockForInform.append(mainInformAboutItem)
-      mainInformAboutItem.classList.add('main__info_cat')
+      mainInformAboutItem.classList.add('main__info-cat')
 
       blockForColor.append(el.color)
-      blockForColor.style.width = '33%'
+      blockForColor.classList.add('main__item-color')
 
-      const catAge = document.createElement('div')
       catAge.innerHTML = '<b>' + el.age + '</b>' + '</br>' + 'Возраст'
       mainInformAboutItem.append(catAge)
 
-      const catPaws = document.createElement('div')
       catPaws.innerHTML = '<b>' + el.paws + '</b>' + '</br>' + 'Кол-во лап'
       mainInformAboutItem.append(catPaws)
 
       price.append(el.price)
       blockForInform.append(price)
-
       mainContainer.append(btnSell)
 
       if (el.sell) {
          btnSell.innerHTML = 'Купить'
-         btnSell.classList.add('main__btn--bye')
+         btnSell.classList.add('main__btn-buy')
       }
       else {
          btnSell.innerHTML = 'продано'
-         btnSell.classList.add('main__btn--sell')
+         btnSell.classList.add('main__btn-sell')
       }
 
       if (el.discount) {
@@ -82,24 +66,83 @@ cats().then((arr) => {
          discount.innerHTML = '- ' + el.discount + '%'
          discount.classList.add('main__discount')
       }
-
-      const likeBtn = document.createElement('div')
-      likeBtn.classList.add('main__btn--like')
+      likeBtn.classList.add('main__btn-like')
       mainContainer.append(likeBtn)
 
       likeBtn.addEventListener('click', () => {
          const showMassage = document.createElement('div')
-         showMassage.classList.add('like__showMassage')
+
+         showMassage.classList.add('like__show-message')
          massageLikeBtn.appendChild(showMassage)
          showMassage.innerHTML = 'товар добавлен в корзину'
 
          setTimeout(() => {
-            showMassage.remove()
+            showMassage.classList.add('like__close-message')
          }, 2000)
       })
    })
+}
+async function loadData() {
+   const dataFromAPI = await fetch('../json/data.json')
+   productsData = await dataFromAPI.json();
+   pushData(productsData)
+}
+
+loadData()
+let productsData = [];
+
+mainBtnAdd.addEventListener('click', () => {
+   MAX_LOAD_COUNT += PRODUCTS_PER_CLICK
+   mainCatalog.innerHTML = ''
+
+   if (MAX_LOAD_COUNT >= productsData.length) {
+      const messageEndList = document.createElement('div')
+      messageEndList.classList.add('main__message-end-list')
+      mainCatalog.appendChild(messageEndList)
+      messageEndList.innerHTML = 'товары закончились'
+
+      setTimeout(() => {
+         messageEndList.classList.add('like__close-message')
+      }, 2000)
+   }
+   pushData(productsData)
 })
 
+
 sortByPrice.addEventListener('click', () => {
-   mainCatalog.sort()
+   productsData.sort((a, b) => a.price > b.price ? 1 : -1)
+   mainCatalog.innerHTML = ''
+   pushData(productsData)
+
+   if (iconForPrice.style.color === 'blue') {
+      iconForPrice.style.color = ''
+      iconForPrice.innerHTML = '&#8659'
+      productsData.sort((a, b) => a.paws > b.paws ? 1 : -1)
+      mainCatalog.innerHTML = ''
+      pushData(productsData)
+      return true
+   }
+   iconForPrice.innerHTML = '&#8657'
+   iconForPrice.style.color = 'blue'
+   iconForAge.innerHTML = '&#8659'
+   iconForAge.style.color = ''
+})
+
+sortByAge.addEventListener('click', () => {
+   productsData.sort((a, b) => a.age > b.age ? 1 : -1)
+   mainCatalog.innerHTML = ''
+   pushData(productsData)
+
+   if (iconForAge.style.color === 'blue') {
+      iconForAge.style.color = ''
+      iconForAge.innerHTML = '&#8659'
+      productsData.sort((a, b) => a.paws > b.paws ? 1 : -1)
+      mainCatalog.innerHTML = ''
+      pushData(productsData)
+      return true
+   }
+   iconForAge.innerHTML = '&#8657'
+   iconForAge.style.color = 'blue'
+   iconForPrice.innerHTML = '&#8659'
+   iconForPrice.style.color = ''
 })
