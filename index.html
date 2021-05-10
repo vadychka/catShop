@@ -10,6 +10,21 @@
 </head>
 
 <body>
+
+   <div class="burger">
+      <div class="burger__container">
+         <div class="burger__btn-close">x</div>
+         <div class="burger__menu">
+            <a href="#">Main</a>
+            <a href="#">Gallery</a>
+            <a href="#">News</a>
+            <a href="#">Profile</a>
+         </div>
+      </div>
+   </div>
+   <div class="like__container">
+      <div class="like"></div>
+   </div>
    <header class="header " id="header">
       <div class="wrapper">
          <div class="header__content">
@@ -23,9 +38,13 @@
                <a href="#">News</a>
                <a href="#">Profile</a>
             </div>
+
             <div class="header__contacts">
                <h2>+544 3490 00000</h2>
                <p>Звони скорее!</p>
+            </div>
+            <div class="btn-burger">
+               <span class="btn-burger__defolt"></span>
             </div>
          </div>
          <div class="header__title">
@@ -36,24 +55,24 @@
 
    <main class="main wrapper">
       <div class="main__sort">
-         <b> Сортировка по: </b>
+         <div><b> Сортировка по: </b></div>
          <div class="main__price">
             <label> Цене</label>
-            <b class="main__price-icon main__arrow-down">&#8659</b>
+            <b class="main__price-icon main__arrow-down">&#9660</b>
          </div>
          <div class="main__age">
             <label> Возросту </label>
-            <b class="main__age-icon main__arrow-down">&#8659</b>
+            <b class="main__age-icon main__arrow-down">&#9660</b>
          </div>
       </div>
       <div class="main__catalog">
       </div>
       <div class="main__add">
-         <p>Показать еще 3 товаров</p>
+         <p class="main__add-items"></p>
       </div>
    </main>
 
-   <footer class="footer wrapper">
+   <footer class="footer wrapper ">
       <div class="footer__title">
          <h2>Успей купить!</h2>
          <p>Подпишись и успей <br>
@@ -62,18 +81,32 @@
       <div class="footer__form">
          <form action="">
             <input type="email" class="footer__field" placeholder="Email">
-            <input type="submit" value="Подписатся" class="footer__button">
+            <input type="button" value="Подписатся" class="footer__button">
             <br>
             <div class="footer__subscribe">
                <input type="checkbox">
-               <label for="">Подписатся на новости</label>
+               <label>Подписатся на новости</label>
             </div>
          </form>
       </div>
    </footer>
 
+   <div class="popup">
+      <div class="popup__area"></div>
+      <div class="popup__body">
+         
+         <div class="popup__content">
+            <div class="popup__close">
+               <p class="popup__text"></p>
+               <p>&#10060</p></div>
+            <p >Вы успешно подписались на нашы обновления</p>
+         </div>
+      </div>
+
+   </div>
+
    <div class="scroll">
-      <a href="#header"><img src="https://img.icons8.com/nolan/64/circled-up-2.png" /></a>
+      <a href="#header" class="scroll-up">^</a>
    </div>
 
 
