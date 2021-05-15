@@ -3,7 +3,7 @@
 
 ## Technologies
 
-+ hrml
++ html/BEM
 + css/scss
 + js/ajax/fetch
 

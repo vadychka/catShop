@@ -17,26 +17,20 @@ const burgerBtnOpen = document.querySelector('.btn-burger')
 const burgerBtnDefoult = document.querySelector('.btn-burger__defolt')
 const mainAddItems = document.querySelector('.main__add-items')
 const like = document.querySelector('.like')
+const itemsLlength = document.querySelector('.items__length')
 
 let productsData = [];
 let MAX_LOAD_COUNT = 3;
 const PRODUCTS_PER_CLICK = 9;
 
-popupBodyBtn.addEventListener('click', popupBody)
-
-sortByPriceBtn.addEventListener('click', sortByPrice)
-
-sortByAgeBtn.addEventListener('click', sortByAge)
-
-footerBtn.addEventListener('click', footerPopup)
-
-popupCloseBtn.addEventListener('click', popupClose)
-
-burgerBtnOpen.addEventListener('click', openBurger)
-
-burgerBtnClose.addEventListener('click', closeBurger)
-
-mainBtnAdd.addEventListener('click', mainAdd)
+sortByPriceBtn.addEventListener('click', sortByPriceClick)
+sortByAgeBtn.addEventListener('click', sortByAgeClick)
+footerBtn.addEventListener('click', openPopupClick)
+popupBodyBtn.addEventListener('click', closePopupClick)
+popupCloseBtn.addEventListener('click', closePopupClick)
+burgerBtnOpen.addEventListener('click', openBurgerClick)
+burgerBtnClose.addEventListener('click', closeBurgerClick)
+mainBtnAdd.addEventListener('click', loadMoreProduct)
 
 let pushData = (arr) => {
    let itemsLength = productsData.length - MAX_LOAD_COUNT
@@ -50,9 +44,11 @@ let pushData = (arr) => {
       generateCard(el)
    })
 }
+
 async function loadData() {
    const dataFromAPI = await fetch('../json/data.json')
    productsData = await dataFromAPI.json();
+   itemsLlength.innerHTML = productsData.length
    pushData(productsData)
 }
 
@@ -116,104 +112,96 @@ function generateCard(el) {
    mainContainer.append(likeBtn)
 
    function likeMassage() {
-      const showMassage = document.createElement('div')
-
-      showMassage.classList.add('like__show-message')
-      like.append(showMassage)
-      showMassage.innerHTML = 'товар добавлен в корзину'
-
-      setTimeout(() => {
-         showMassage.classList.add('like__close-message')
-      }, 2000)
+      generateToste('white', 'товар добавлен в корзину')
    }
 }
 
-function mainAdd() {
+function generateToste(type, text) {
+   const messageEndList = document.createElement('div')
+   messageEndList.classList.add('like__show-message')
+   like.appendChild(messageEndList)
+   messageEndList.style.color = type
+   messageEndList.innerHTML = text
+   setTimeout(() => {
+      messageEndList.classList.add('like__close-message')
+   }, 2000)
+}
+function loadMoreProduct() {
    MAX_LOAD_COUNT += PRODUCTS_PER_CLICK
    mainCatalog.innerHTML = ''
 
    if (MAX_LOAD_COUNT >= productsData.length) {
-      const messageEndList = document.createElement('div')
-      messageEndList.classList.add('like__show-message')
-      like.appendChild(messageEndList)
-      messageEndList.style.color = 'red'
-      messageEndList.innerHTML = 'товары закончились'
-
-      setTimeout(() => {
-         messageEndList.classList.add('like__close-message')
-      }, 2000)
+      generateToste('red', 'товары закончились')
    }
    pushData(productsData)
 }
 
-function footerPopup() {
-   popup.classList.add('popup__open')
-   let sec = 2;
-   popupText.innerHTML = sec + 1
-   let popupSec = setInterval(() => {
-      popupText.innerHTML = sec
-      if (sec <= 0) {
-         clearInterval(popupSec)
-      }
-      sec--
-   }, 1000)
-
-   setTimeout(() => popup.classList.remove('popup__open'), 3000)
-
-}
-
-function popupClose() { popup.classList.remove('popup__open') }
-
-function openBurger() {
+function openBurgerClick() {
    burgerBlock.classList.add('burger__show')
    burgerBlock.classList.remove('burger__close')
    burgerBtnDefoult.classList.add('btn-burger__active')
 }
 
-function closeBurger() {
+function closeBurgerClick() {
    burgerBlock.classList.add('burger__close')
    burgerBlock.classList.remove('burger__show')
    burgerBtnDefoult.classList.remove('btn-burger__active')
 }
 
-function sortByAge() {
+function sortUnActive(icon) {
+   icon.style.color = ''
+   icon.innerHTML = '&#9660'
+   productsData.sort((a, b) => a.paws > b.paws ? 1 : -1)
+   mainCatalog.innerHTML = ''
+   pushData(productsData)
+}
+
+function sortByAgeClick() {
    productsData.sort((a, b) => a.age > b.age ? 1 : -1)
    mainCatalog.innerHTML = ''
    pushData(productsData)
 
    if (iconForAge.style.color === 'blue') {
-      iconForAge.style.color = ''
-      iconForAge.innerHTML = '&#9660'
-      productsData.sort((a, b) => a.paws > b.paws ? 1 : -1)
-      mainCatalog.innerHTML = ''
-      pushData(productsData)
-      return true
+      sortUnActive(iconForAge)
+   } else {
+      iconForAge.innerHTML = '&#9650'
+      iconForAge.style.color = 'blue'
+      iconForPrice.innerHTML = '&#9660'
+      iconForPrice.style.color = ''
    }
-   iconForAge.innerHTML = '&#9650'
-   iconForAge.style.color = 'blue'
-   iconForPrice.innerHTML = '&#9660'
-   iconForPrice.style.color = ''
 }
 
-function sortByPrice() {
+function sortByPriceClick() {
    productsData.sort((a, b) => a.price > b.price ? 1 : -1)
    mainCatalog.innerHTML = ''
    pushData(productsData)
 
    if (iconForPrice.style.color === 'blue') {
-      iconForPrice.style.color = ''
-      iconForPrice.innerHTML = '&#9660'
-      productsData.sort((a, b) => a.paws > b.paws ? 1 : -1)
-      mainCatalog.innerHTML = ''
-      pushData(productsData)
-      return true
+      sortUnActive(iconForPrice)
+   } else {
+      iconForPrice.innerHTML = '&#9650'
+      iconForPrice.style.color = 'blue'
+      iconForAge.innerHTML = '&#9660'
+      iconForAge.style.color = ''
    }
-   iconForPrice.innerHTML = '&#9650'
-   iconForPrice.style.color = 'blue'
-   iconForAge.innerHTML = '&#9660'
-   iconForAge.style.color = ''
 }
 
-function popupBody() { popup.classList.remove('popup__open') }
+function closePopupClick() {
+   popup.classList.remove('popup__open')
+}
+
+function openPopupClick() {
+   popup.classList.add('popup__open')
+   let sec = 3;
+   popupText.innerHTML = sec
+   let popupSec = setInterval(() => {
+      if (sec <= 0 || !popup.classList.contains('popup__open')) {
+         popup.classList.remove('popup__open')
+         clearInterval(popupSec)
+         sec = 3
+      }
+      popupText.innerHTML = --sec
+   }, 1000)
+}
 
 loadData()
